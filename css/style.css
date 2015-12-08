@@ -1,0 +1,206 @@
+* {
+	margin: 0;
+ 	padding: 0;
+}
+ul {
+	list-style: none;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+#header {
+	max-width: 1280px;
+	width: 100%;
+	height: 1080px;
+	/*background: #fc0;*/
+	background-image: url(../images/project.png);
+}
+
+#bg_logo {
+	/*background-image: url(../images/path.jpg);	*/
+	background-size: cover;
+	padding-top: 70px;
+	padding-bottom: 30px;
+}
+
+#logo {
+	width: 150px;
+	margin: 0 auto;
+}
+
+#nav {
+	/*position: absolute;
+	top: 254px;*/
+	width: 100%;
+	background-image: url(../images/PathPath.jpg);
+	padding: 35px 0;
+}
+
+#nav ul {
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+	font-size: 0;
+}
+
+#nav li {
+	/*float: left;*/
+	margin-right: 140px;
+	font-size: 18px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#nav li:last-child {
+	margin-right: 0;
+}
+
+#nav a {
+	text-transform: uppercase;
+	font: 18px Century Gothic, sans-serif;
+	color: #000000;
+}
+
+#listings {
+	margin-top: 455px;
+	height: 210px;
+}
+
+.left-slide {
+	float: left;
+	width: 170px;
+	height: 100%;
+	background-color: #212121;
+}
+
+.center-slide {
+	float: left;
+	width: 920px;
+	height: 100%;
+	background-image: url(../images/slider-background.jpg);
+	
+}
+
+.right-slide {
+	float: left;
+	width: 170px;
+	height: 100%;
+	background-color: #212121;
+}
+
+.slide {
+	cursor: pointer;
+	position: relative;
+}
+
+.slide img {
+	position: absolute;
+	top: 50%;
+	margin-top: -35px;
+	left: 50%;
+	margin-left: -18px;
+}
+
+.slide:hover {
+	background-color: #ffffff;
+}
+
+#about {
+	height: 820px;
+	width: 100%;
+	background-color: #ffffff;
+}
+
+.img-about {
+	width: 640px;
+	background-image: url(../images/img-about);
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-right: 50px;
+	float: left;
+}
+
+.container-about {
+	width: 410px;
+	float: left;
+	padding-top: 50px;
+	font: 16px Century Gothic, sans-serif;
+	color: #212121;
+}
+
+.button-about {
+	margin-top: 45px;
+}
+.link-cert {
+	margin-left: 50px;
+	color: #52a6f5;
+	text-decoration: none;
+    border-bottom: 1px dashed #52a6f5;
+}
+
+.link-cert:hover {
+	color: #2998f3;
+	text-decoration: none;
+	/*text-decoration: underline;*/
+	border-bottom: 1px solid #2998f3;
+}
+
+.btn-contact {
+	width: 160px;
+	height: 55px;
+	background: #ffffff;
+	color: #000000;
+	font: 14px Times New Roman Regular, sans-serif;
+	cursor: pointer;
+	text-transform: uppercase;
+	border: 0;
+	border: 1px solid #424242;
+	border-radius: 5px;
+}
+
+.btn-contact:hover {
+	background: #212121;
+	color: #ffffff;
+	font: 16px Century Gothic Bold, sans-serif;
+}
+
+#YMapsID {
+	height: 720px;
+	width: 100%;	
+}
+
+#contacts {
+	width: 100%;
+	height: 250px;
+	background: #ffffff;
+	position: relative;
+	font: 16px Century Gothic Regular, sans-serif;
+}
+
+.contact-1 {
+	position: absolute;
+	display: inline-block;
+	top: 100px;
+	left: 170px;
+}
+
+.contact-1 span {
+	display: block;	
+}
+
+.contact-1 span:nth-child(2) {
+	margin: 10px 0;
+}
+
+.contact-1 span:nth-child(3) {
+	color: #2196f3;
+}
+
+.contact-2 {
+	position: absolute;
+	display: inline-block;
+	top: 120px;
+	left: 990px;
+}
