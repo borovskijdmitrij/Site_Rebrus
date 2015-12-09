@@ -1,7 +1,18 @@
-window.onload = function () {
-    // Создает экземпляр карты и привязывает его к созданному контейнеру
-        var map = new YMaps.Map(document.getElementById("YMapsID"));
-    
-        // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
-        map.setCenter(new YMaps.GeoPoint(52.96293975, 36.08510825), 10);
-    };
+var h_hght = 340; // высота шапки
+var h_mrg = 0;    // отступ когда шапка уже не видна
+
+$(function(){
+  $('.menu-allways-on-top').hide();
+  $(window).scroll(function(){
+    var top = $(this).scrollTop();
+    var elem = $('.menu-allways-on-top');
+    if (top+h_mrg < h_hght) {
+      elem.css('top', (h_hght-top));
+      $('.menu-allways-on-top').hide();
+
+    } else {
+      elem.css('top', h_mrg);
+      $('.menu-allways-on-top').fadeIn("slow");
+    }
+  });
+});
