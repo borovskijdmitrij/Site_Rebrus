@@ -11,7 +11,7 @@ a, a:hover {
 }
 
 #header {
-	max-width: 1280px;
+	/*max-width: 1280px;*/
 	width: 100%;
 	height: 1080px;
 	background-image: url(../images/project.png);
@@ -39,9 +39,17 @@ a, a:hover {
 	width: 100%;
 	background-image: url(../images/bg-menu-allways-on-top.png);
 	padding: 30px 0;
-	top: 340px; /*высота шапки в пикселях*/
+	top: 340px;
    	position: fixed;
    	z-index: 1000;
+}
+
+.logo-menu-allways-on-top {
+	display: inline-block;
+	width: 26px; 
+	height: 50px;
+	background: url(../images/logo-menu-allways-on-top.png);
+	margin-left:-26px; 
 }
 
 .nav ul {
@@ -212,11 +220,6 @@ a, a:hover {
 	font: 16px Century Gothic Bold, sans-serif;
 }
 
-#YMapsID {
-	height: 720px;
-	width: 100%;	
-}
-
 #contacts {
 	width: 100%;
 	height: 250px;
@@ -254,8 +257,82 @@ a, a:hover {
 .map {
 	position: relative;
 }
+
+.bg-map {
+	width: 100%;
+	height: 720px;
+	background: url(../images/map.png) 100% 100% no-repeat;
+  	background-size: cover;
+}
 .marker {
 	position: absolute;
 	top: 205px;
 	left: 525px; 
 }
+
+/*lightbox*/
+
+
+.lb-overlay{
+	width: 0px;
+	height: 0px;
+	position: fixed;
+	overflow: hidden;
+	left: 0px; /*затемнение фона границы*/
+	top: 0px;
+	padding: 0px;
+	z-index: 1000;
+	text-align: center;
+	background: rgb(241,210,194);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%, rgba(241,210,194,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.56)), color-stop(100%,rgba(241,210,194,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+	background: radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+}
+
+.lb {
+	width: 60%;
+	height: 80%;
+	background-image: url(../images/1.jpg);
+}
+
+.lb-overlay a.lb-close{
+	background: rgba(27,54,81,0.8);
+	z-index: 1001;
+	color: #fff;
+	position: absolute;
+	top: 43px;
+	left: 85%;
+	font-size: 15px;
+	line-height: 26px;
+	text-align: center;
+	width: 50px;
+	height: 23px;
+	overflow: hidden;
+	margin-left: -25px;
+	opacity: 0;
+	filter: alpha(opacity=0); /* internet explorer */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+}
+
+/*Открыть картинку*/
+.lb-overlay:target {
+	width: auto;
+	height: auto;
+	bottom: 0px;
+	right: 0px;
+	padding: 20px 100px 120px 100px;
+}
+/*открыть большыу картику*/
+.lb-overlay:target img,
+.lb-overlay:target a.lb-close{
+	opacity: 1;
+	filter: alpha(opacity=99); /* internet explorer */
+}
+
+/*end_lightbox*/
